@@ -106,23 +106,23 @@ class ConverterViewController: UIViewController {
                     return
                 }
                 if outputDisplay.text!.contains("°C") {
-                inputNum = Double(Double(nums)! * (-1))
+                    inputNum = inputNum * -1
                 inputDisplay.text = String(inputNum) + " °F"
                 outputNum = fahToCel(inputNum: inputNum)
                 outputDisplay.text = String(outputNum) + " °C"
                 } else if outputDisplay.text!.contains("°F") {
-                    inputNum = Double(Double(nums)! * (-1))
+                    inputNum = inputNum * -1
                     inputDisplay.text = String(inputNum) + " °C"
                     outputNum = celToFah(inputNum: inputNum)
                     outputDisplay.text = String(outputNum) + " °F"
                 } else if outputDisplay.text!.contains("km") {
-                    inputNum = Double(Double(nums)! * (-1))
+                    inputNum = inputNum * -1
                     inputDisplay.text = String(inputNum) + " mi"
                     outputNum = miToKm(inputNum: inputNum)
                     outputDisplay.text = String(outputNum) + " km"
                     
                 } else if outputDisplay.text!.contains("mi") {
-                    inputNum = Double(Double(nums)! * (-1))
+                    inputNum = inputNum * -1
                     inputDisplay.text = String(inputNum) + " km"
                     outputNum = kmToMi(inputNum: inputNum)
                     outputDisplay.text = String(outputNum) + " mi"
